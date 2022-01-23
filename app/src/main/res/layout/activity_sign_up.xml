@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <EditText
+        android:id="@+id/signUpEmailEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Enter Email..."
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/userNameET"
+        app:layout_constraintStart_toStartOf="@+id/userNameET"
+        app:layout_constraintTop_toBottomOf="@+id/userNameET" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/uploadImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/profileavatar"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loggedUserEmail" />
+
+    <TextView
+        android:id="@+id/loggedUserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weather Forecast"
+
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/signUpPassEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Enter Password..."
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/signUpEmailEt"
+        app:layout_constraintStart_toStartOf="@+id/signUpEmailEt"
+        app:layout_constraintTop_toBottomOf="@+id/signUpEmailEt" />
+
+    <Button
+        android:id="@+id/createUserBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Create User"
+        app:layout_constraintEnd_toEndOf="@+id/signUpPassEt"
+        app:layout_constraintStart_toStartOf="@+id/signUpPassEt"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPassEt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?  "
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="gotoLogIn"
+            android:text="Log In"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/userNameET"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Enter Name..."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/uploadImage"
+        app:layout_constraintStart_toStartOf="@+id/uploadImage"
+        app:layout_constraintTop_toBottomOf="@+id/uploadImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
